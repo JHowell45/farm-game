@@ -22,7 +22,6 @@ func animate_movement(velocity: Vector3, animator: AnimationPlayer):
 		direction = DirectionEnum.FORWARD
 		return
 	if velocity.is_zero_approx():
-		print("ZERO")
 		match direction:
 			DirectionEnum.LEFT:
 				animator.play("Left stationary")

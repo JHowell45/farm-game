@@ -21,7 +21,8 @@ func _physics_process(delta):
 	if Input.is_action_pressed("forward"):
 		direction.z -= 1
 	if not direction.is_zero_approx():
-		$Pivot.basis = Basis.looking_at(direction.normalized())
+		direction = direction.normalized()
+		$Pivot.basis = Basis.looking_at(direction)
 	
 	# Ground Velocity
 	target_velocity.x = direction.x * speed * delta
@@ -34,5 +35,6 @@ func _physics_process(delta):
 	# Moving the Character
 	velocity = target_velocity
 	move_and_slide()
+	print(velocity)
 	
 	animate.animate_movement(velocity, animator)
