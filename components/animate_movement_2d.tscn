@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://m6lk06vktmpd"]
-
-[ext_resource type="Script" path="res://components/animate_movement_2d.gd" id="1_xkpjq"]
-
-[node name="AnimateMovement2D" type="Node"]
-script = ExtResource("1_xkpjq")

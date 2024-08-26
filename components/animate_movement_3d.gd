@@ -2,9 +2,9 @@ extends Node
 
 var direction: DirectionEnum
 
-enum DirectionEnum {LEFT, RIGHT, UP, DOWN}
+enum DirectionEnum {LEFT, RIGHT, BACK, FORWARD}
 
-func animate_movement(velocity: Vector2, animator: AnimationPlayer):
+func animate_movement(velocity: Vector3, animator: AnimationPlayer):
 	if velocity.x < 0:
 		animator.play("Left running")
 		direction = DirectionEnum.LEFT
@@ -13,13 +13,13 @@ func animate_movement(velocity: Vector2, animator: AnimationPlayer):
 		animator.play("Right running")
 		direction = DirectionEnum.RIGHT
 		return
-	if velocity.y < 0:
+	if velocity.z < 0:
 		animator.play("Backward running")
-		direction = DirectionEnum.UP
+		direction = DirectionEnum.BACK
 		return
-	if velocity.y > 0:
+	if velocity.z > 0:
 		animator.play("Forward running")
-		direction = DirectionEnum.DOWN
+		direction = DirectionEnum.FORWARD
 		return
 	if velocity.is_zero_approx():
 		print("ZERO")
@@ -28,8 +28,8 @@ func animate_movement(velocity: Vector2, animator: AnimationPlayer):
 				animator.play("Left stationary")
 			DirectionEnum.RIGHT:
 				animator.play("Right stationary")
-			DirectionEnum.UP:
+			DirectionEnum.BACK:
 				animator.play("Backward stationary")
-			DirectionEnum.DOWN:
+			DirectionEnum.FORWARD:
 				animator.play("Forward stationary")
 		
