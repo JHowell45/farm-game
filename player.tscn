@@ -249,11 +249,12 @@ script = ExtResource("1_mcp2g")
 shape = SubResource("BoxShape3D_awx31")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
+cast_shadow = 2
+alpha_cut = 2
 texture_filter = 0
 texture = ExtResource("2_krft0")
 hframes = 4
 vframes = 4
-frame = 3
 metadata/_aseprite_wizard_config_ = {
 "i_mode": -1,
 "keep_anim_length": false,
@@ -267,8 +268,10 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://assets/Player.ase"
 }
 metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": true,
 "layer_section": true,
-"output_section": true
+"output_section": true,
+"slice_section": true
 }
 metadata/_aseprite_wizard_source_file_hash_ = "beda8a2a4b67d31a9988adfbdea65017"
 

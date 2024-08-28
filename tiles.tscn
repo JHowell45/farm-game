@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cew4j4dypp2qq"]
+
+[ext_resource type="PackedScene" uid="uid://cw435c5au6lb6" path="res://assets/ground_mesh.gltf" id="1_jgysx"]
+
+[node name="Tiles" type="Node3D"]
+
+[node name="GroundMesh" parent="." instance=ExtResource("1_jgysx")]

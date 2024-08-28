@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgywgtar8o8ox"]
+
+[ext_resource type="Texture2D" uid="uid://2tmhsdc64l1o" path="res://assets/Texture/TX Tileset Grass.png" id="1_gjdgi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tjhye"]
+albedo_texture = ExtResource("1_gjdgi")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_g1qog"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x3a6q"]
+size = Vector3(2.02258, 0.0354614, 2.00452)
+
+[node name="GroundMesh" type="MeshInstance3D"]
+material_override = SubResource("StandardMaterial3D_tjhye")
+mesh = SubResource("PlaneMesh_g1qog")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00738525, -0.0110168, -0.00262451)
+shape = SubResource("BoxShape3D_x3a6q")
