@@ -41,5 +41,4 @@ transform = Transform3D(1, 0, 0, 0, -0.692143, 0.72176, 0, -0.72176, -0.692143, 
 light_color = Color(0.0784314, 1, 1, 1)
 light_energy = 11.86
 shadow_enabled = true
-shadow_normal_bias = 10.0
 shadow_reverse_cull_face = true
